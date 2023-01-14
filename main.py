@@ -172,11 +172,13 @@ def main():
     score = 0
     clock = pygame.time.Clock()
 
+    running = True
     while True:
         clock.tick(30)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                running = False
                 pygame.quit()
                 quit()
             if event.type == pygame.KEYDOWN:
